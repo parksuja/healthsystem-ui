@@ -20,6 +20,7 @@ import LoadingIndicator from '../common/LoadingIndicator';
 import PrivateRoute from '../common/PrivateRoute';
 
 import { Layout, notification } from 'antd';
+import CourseReview from "../health/CourseReview";
 const { Content } = Layout;
 
 class App extends Component {
@@ -111,6 +112,8 @@ class App extends Component {
                 <Route path="/users/:username" 
                   render={(props) => <Profile isAuthenticated={this.state.isAuthenticated} currentUser={this.state.currentUser} {...props}  />}>
                 </Route>
+                <Route path="/CourseReview" component={CourseReview}></Route>
+                {/*이동 시켜주는 경로지정 */}
                 <PrivateRoute authenticated={this.state.isAuthenticated} path="/poll/new" component={NewPoll} handleLogout={this.handleLogout}></PrivateRoute>
                 <Route component={NotFound}></Route>
               </Switch>

@@ -34,6 +34,11 @@ class AppHeader extends Component {
               <img src={pollIcon} alt="poll" className="poll-icon" />
             </Link>
           </Menu.Item>,
+              <Menu.Item key="/CourseReview">
+              <Link to="/CourseReview">
+                  CourseReview
+              </Link>
+              </Menu.Item>,
           <Menu.Item key="/profile" className="profile-menu">
                 <ProfileDropdownMenu 
                   currentUser={this.props.currentUser} 
